@@ -1,0 +1,13 @@
+header {
+  height: $header-height;
+  padding: $header-padding;
+  border-top: 1px solid $grey--border;
+  border-bottom: 1px solid $grey--border;
+  & span {
+    color: $blue;
+  }
+  & h1 {
+    font-weight: 500;
+    font-size: 1.6rem;
+  }
+}

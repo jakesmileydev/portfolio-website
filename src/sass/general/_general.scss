@@ -1,0 +1,16 @@
+#root {
+  max-width: 67rem;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+}
+body {
+  font-family: "Barlow", sans-serif;
+  color: $grey--text;
+  background-color: $grey--bg;
+}
+
+.page {
+  width: 100%;
+  padding: $page-padding;
+}

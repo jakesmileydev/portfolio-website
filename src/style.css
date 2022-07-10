@@ -1,0 +1,118 @@
+#root {
+  max-width: 67rem;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+}
+
+body {
+  font-family: "Barlow", sans-serif;
+  color: #4a494a;
+  background-color: #f5f5f5;
+}
+
+.page {
+  width: 100%;
+  padding: 3rem;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style-type: none;
+}
+
+button {
+  border: none;
+  outline: none;
+  font-family: inherit;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  font-family: inherit;
+}
+
+.navigation {
+  padding: 3rem;
+  height: 100vh;
+  border-right: 1px solid #cccccc;
+}
+.navigation .navigation__logo {
+  border-top: 1px solid #cccccc;
+  border-bottom: 1px solid #cccccc;
+  height: 14rem;
+  padding: 1rem 0 0 0;
+}
+.navigation .navigation__logo span {
+  display: block;
+  font-weight: 500;
+  font-size: 2rem;
+}
+.navigation .navigation__logo span:nth-child(1) {
+  color: #d0605c;
+}
+.navigation .navigation__logo span:nth-child(3) {
+  color: #70c4cb;
+}
+.navigation .navigation__links {
+  margin-bottom: 4rem;
+}
+.navigation .navigation__links li {
+  text-transform: uppercase;
+  padding: 0.6rem 0;
+  border-bottom: 1px solid #cccccc;
+}
+.navigation .navigation__socials {
+  border-top: 1px solid #cccccc;
+  display: flex;
+  gap: 1rem;
+}
+.navigation .navigation__socials .navigation__socials__link {
+  padding: 0.4rem;
+  background-color: #4a494a;
+  margin-top: 0.4rem;
+  display: flex;
+  border-radius: 3px;
+  position: relative;
+}
+.navigation .navigation__socials .navigation__socials__link::before {
+  content: "";
+  width: 1rem;
+  height: 1rem;
+  position: absolute;
+  bottom: -2px;
+  left: 4px;
+  border-radius: 1px;
+  transform: rotate(45deg);
+  background-color: #4a494a;
+}
+.navigation .navigation__socials .navigation__socials__link:hover {
+  opacity: 0.8;
+}
+.navigation .navigation__socials .navigation__socials__icon {
+  font-size: 1.2rem;
+  color: #f5f5f5;
+  z-index: 1;
+}
+
+header {
+  height: 14rem;
+  padding: 1rem 0 0 0;
+  border-top: 1px solid #cccccc;
+  border-bottom: 1px solid #cccccc;
+}
+header span {
+  color: #70c4cb;
+}
+header h1 {
+  font-weight: 500;
+  font-size: 1.6rem;
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -3,10 +3,11 @@ header {
   padding: $header-padding;
   border-top: 1px solid $grey--border;
   border-bottom: 1px solid $grey--border;
-  & span {
-    color: $blue;
-  }
+  position: relative;
   & h1 {
+    & span {
+      color: $blue;
+    }
     font-weight: 500;
     font-size: 1.6rem;
   }

@@ -2,6 +2,10 @@
   padding: $page-padding;
   height: 100vh;
   border-right: 1px solid $grey--border;
+  position: fixed;
+  @include max-1000 {
+    display: none;
+  }
   & .navigation__logo {
     border-top: 1px solid $grey--border;
     border-bottom: 1px solid $grey--border;

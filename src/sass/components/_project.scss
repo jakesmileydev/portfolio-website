@@ -4,6 +4,7 @@
   border-bottom: 1px solid $grey--border;
   gap: 2rem;
   padding: 2rem 0;
+  align-items: center;
 
   & .project__header {
     font-weight: 500;
@@ -38,5 +39,10 @@
     margin-top: 2rem;
     display: flex;
     justify-content: space-around;
+  }
+  & .project__link {
+    &:hover {
+      border-bottom: 1px solid $grey--text;
+    }
   }
 }

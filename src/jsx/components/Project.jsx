@@ -34,7 +34,7 @@ export default function Project(props) {
               target="_blank"
               rel="noreferrer"
             >
-              Live Link
+              Visit Site
             </a>
           </li>
           <li>
@@ -44,7 +44,7 @@ export default function Project(props) {
               target="_blank"
               rel="noreferrer"
             >
-              Github Repo
+              View Code
             </a>
           </li>
         </ul>

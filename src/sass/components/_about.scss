@@ -1,0 +1,32 @@
+.about {
+  padding: 2rem 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  border-bottom: 1px solid $grey--border;
+  align-items: center;
+  & p {
+    margin-bottom: 1rem;
+  }
+  & .about__image {
+    background-image: url("./images/IMG_3946.jpg");
+    padding-top: 100%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  & .about__technologies {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    & ul {
+      margin-top: 1rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      & li {
+        text-transform: uppercase;
+        font-weight: 500;
+      }
+    }
+  }
+}

@@ -8,9 +8,27 @@ body {
   font-family: "Barlow", sans-serif;
   color: $grey--text;
   background-color: $grey--bg;
+  overflow-y: scroll;
 }
 
 .page {
   width: 100%;
   padding: $page-padding;
+  margin-left: 270px;
+  @include max-1000 {
+    margin-left: 0;
+  }
+}
+input,
+textarea {
+  font-size: 1.1rem;
+  background-color: $grey--bg;
+  padding: 0.4rem;
+  border: 1px solid $grey--border;
+  color: inherit;
+  font-family: inherit;
+  &:focus {
+    outline: 3px solid $blue;
+    border-radius: 3px;
+  }
 }

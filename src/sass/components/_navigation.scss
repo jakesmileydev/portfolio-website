@@ -1,10 +1,26 @@
 .navigation {
-  padding: $page-padding;
-  height: 100vh;
-  border-right: 1px solid $grey--border;
-  position: fixed;
   @include max-1000 {
-    display: none;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.76);
+    position: fixed;
+    z-index: 100;
+    opacity: 0;
+    visibility: hidden;
+    & .navigation__wrapper {
+      right: 0;
+      transform: translateX(100%);
+    }
+    & .navigation__logo {
+      margin-top: 4rem;
+    }
+  }
+  & .navigation__wrapper {
+    padding: $page-padding;
+    height: 100vh;
+    border-right: 1px solid $grey--border;
+    position: fixed;
+    background-color: $grey--bg;
   }
   & .navigation__logo {
     border-top: 1px solid $grey--border;
@@ -39,7 +55,7 @@
     & .navigation__socials__link {
       padding: 0.4rem;
       background-color: $grey--text;
-      margin-top: 0.4rem;
+      margin-top: 0.6rem;
       display: flex;
       border-radius: 3px;
       position: relative;
@@ -62,6 +78,20 @@
       font-size: 1.2rem;
       color: $grey--bg;
       z-index: 1;
+    }
+  }
+
+  & .navigation__close-mobile {
+    position: absolute;
+    top: 3.6rem;
+    right: 3rem;
+    background-color: $grey--bg;
+
+    & .navigation__close-mobile__icon {
+      font-size: 2.2rem;
+      color: $grey--text;
+      background-color: $grey--bg;
+      display: none;
     }
   }
 }

@@ -5,7 +5,7 @@ export default function Header(props) {
         <span>/ </span>
         {props.headerText}
       </h1>
-      <button className="open-navigation">
+      <button className="open-mobile">
         <span></span>
         <span></span>
         <span></span>

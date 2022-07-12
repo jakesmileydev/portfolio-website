@@ -6,10 +6,10 @@ export default function About() {
       <main>
         <section className="about">
           <div className="about__text">
+            <p>Hello!</p>
             <p>
-              Hi There! I'm Jake, a web developer from Camano Island,
-              Washington. I love creating web applications that people can enjoy
-              and use.
+              I'm Jake, a web developer from Camano Island, Washington. I love
+              creating web applications that people can enjoy and use.
             </p>
             <p>
               My goal is to create products that clients are proud of, and to

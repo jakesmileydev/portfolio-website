@@ -11,4 +11,31 @@ header {
     font-weight: 500;
     font-size: 1.6rem;
   }
+  // Mobile Navigation Menu Button
+  & .open-mobile {
+    position: absolute;
+    top: 1rem;
+    right: -0.5rem;
+    background-color: $grey--bg;
+    padding: 0.5rem;
+    cursor: pointer;
+    & span {
+      width: 2.2rem;
+      height: 3px;
+      background-color: $grey--text;
+      display: block;
+      margin-bottom: 8px;
+      margin-left: auto;
+    }
+    & span:nth-child(1) {
+      width: 1.7rem;
+    }
+    & span:nth-child(3) {
+      width: 1.2rem;
+    }
+    display: none;
+    @include max-1000 {
+      display: block;
+    }
+  }
 }

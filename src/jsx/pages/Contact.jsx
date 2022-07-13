@@ -29,7 +29,7 @@ export default function Contact(props) {
           className="contact-form"
           name="smiley-contact"
           method="POST"
-          action="/#/about"
+          action="/about"
         >
           {/* hidden input for Netlify */}
           <input type="hidden" name="form-name" value="smiley-contact" />

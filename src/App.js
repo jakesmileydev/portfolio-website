@@ -7,6 +7,7 @@ import Navigation from "./jsx/components/Navigation";
 import Work from "./jsx/pages/Work";
 import Contact from "./jsx/pages/Contact";
 import About from "./jsx/pages/About";
+import ThankYou from "./jsx/pages/ThankYou";
 
 export default function App() {
   const location = useLocation();
@@ -36,6 +37,11 @@ export default function App() {
             exact
             path="/about"
             element={<About setIsMobileNavOpen={setIsMobileNavOpen} />}
+          />
+          <Route
+            exact
+            path="/thank-you"
+            element={<ThankYou setIsMobileNavOpen={setIsMobileNavOpen} />}
           />
         </Routes>
         {/* </div> */}

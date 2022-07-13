@@ -1,6 +1,6 @@
 import Header from "../components/Header";
 import { motion } from "framer-motion";
-import { useNavigate } from "react";
+import { useNavigate } from "react-router-dom";
 export default function Contact(props) {
   let navigate = useNavigate();
   const submitHandler = (e) => {

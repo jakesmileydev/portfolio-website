@@ -32,7 +32,7 @@ export default function Contact(props) {
           data-netlify="true"
         >
           {/* hidden input for Netlify */}
-          <input type="hidden" name="contact-form" value="contact" />
+          <input type="hidden" name="contact-form" value="contact-form" />
 
           <label htmlFor="name">Name</label>
           <input

@@ -23,6 +23,7 @@ export default function Contact(props) {
         headerText="CONTACT"
         setIsMobileNavOpen={props.setIsMobileNavOpen}
       />
+
       <main>
         <form
           className="contact-form"
@@ -30,6 +31,9 @@ export default function Contact(props) {
           method="POST"
           data-netlify="true"
         >
+          {/* hidden input for Netlify */}
+          <input type="hidden" name="form-name" value="contact" />
+
           <label htmlFor="name">Name</label>
           <input
             id="name"
@@ -37,6 +41,7 @@ export default function Contact(props) {
             className="contact-form__input"
             type="text"
           />
+
           <label htmlFor="email">Email</label>
           <input
             id="email"
@@ -44,12 +49,14 @@ export default function Contact(props) {
             className="contact-form__input"
             type="email"
           />
+
           <label htmlFor="message">Message</label>
           <textarea
             id="message"
             name="message"
             className="contact-form__textarea"
           />
+
           <button className="contact-form__button">Send</button>
         </form>
       </main>

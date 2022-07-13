@@ -25,17 +25,29 @@ export default function Navigation(props) {
 
         <ul className="navigation__links">
           <li>
-            <Link onClick={() => props.setIsMobileNavOpen(false)} to="/">
+            <Link
+              className="navigation__link"
+              onClick={() => props.setIsMobileNavOpen(false)}
+              to="/"
+            >
               Work
             </Link>
           </li>
           <li>
-            <Link onClick={() => props.setIsMobileNavOpen(false)} to="/about">
+            <Link
+              className="navigation__link"
+              onClick={() => props.setIsMobileNavOpen(false)}
+              to="/about"
+            >
               About
             </Link>
           </li>
           <li>
-            <Link onClick={() => props.setIsMobileNavOpen(false)} to="/contact">
+            <Link
+              className="navigation__link"
+              onClick={() => props.setIsMobileNavOpen(false)}
+              to="/contact"
+            >
               Contact
             </Link>
           </li>

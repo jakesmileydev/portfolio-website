@@ -1,6 +1,8 @@
 import { Routes, Route, useLocation } from "react-router-dom";
 import { useState } from "react";
 
+import { AnimatePresence } from "framer-motion";
+
 import Navigation from "./jsx/components/Navigation";
 import Work from "./jsx/pages/Work";
 import Contact from "./jsx/pages/Contact";
@@ -17,8 +19,8 @@ export default function App() {
         isMobileNavOpen={isMobileNavOpen}
         setIsMobileNavOpen={setIsMobileNavOpen}
       />
-
-      <div className="page">
+      <AnimatePresence exitBeforeEnter initial={false}>
+        {/* <div className="page"> */}
         <Routes location={location} key={location.pathname}>
           <Route
             exact
@@ -36,7 +38,8 @@ export default function App() {
             element={<About setIsMobileNavOpen={setIsMobileNavOpen} />}
           />
         </Routes>
-      </div>
+        {/* </div> */}
+      </AnimatePresence>
     </>
   );
 }

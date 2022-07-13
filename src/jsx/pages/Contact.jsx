@@ -1,13 +1,35 @@
 import Header from "../components/Header";
+import { motion } from "framer-motion";
+
 export default function Contact(props) {
   return (
-    <>
+    <motion.div
+      className="page"
+      initial={{ opacity: 0, y: 30 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{
+        opacity: {
+          ease: "linear",
+          duration: 0.3,
+        },
+        y: {
+          ease: "easeOut",
+          duration: 0.3,
+        },
+      }}
+      exit={{ opacity: 0, transition: { duration: 0.2 } }}
+    >
       <Header
         headerText="CONTACT"
         setIsMobileNavOpen={props.setIsMobileNavOpen}
       />
       <main>
-        <form className="contact-form">
+        <form
+          className="contact-form"
+          name="contact-form"
+          method="POST"
+          data-netlify="true"
+        >
           <label htmlFor="name">Name</label>
           <input
             id="name"
@@ -31,6 +53,6 @@ export default function Contact(props) {
           <button className="contact-form__button">Send</button>
         </form>
       </main>
-    </>
+    </motion.div>
   );
 }

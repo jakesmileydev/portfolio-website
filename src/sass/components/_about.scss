@@ -45,7 +45,7 @@
   }
   @include max-600 {
     grid-template-columns: 1fr;
-    & .about__image {
+    & .about__image-container {
       grid-row: 1;
     }
   }

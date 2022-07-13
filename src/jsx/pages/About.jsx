@@ -1,7 +1,24 @@
 import Header from "../components/Header";
+import { motion } from "framer-motion";
+
 export default function About(props) {
   return (
-    <>
+    <motion.div
+      className="page"
+      initial={{ opacity: 0, y: 30 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{
+        opacity: {
+          ease: "linear",
+          duration: 0.3,
+        },
+        y: {
+          ease: "easeOut",
+          duration: 0.3,
+        },
+      }}
+      exit={{ opacity: 0, transition: { duration: 0.2 } }}
+    >
       <Header
         headerText="ABOUT"
         setIsMobileNavOpen={props.setIsMobileNavOpen}
@@ -39,6 +56,6 @@ export default function About(props) {
           </div>
         </section>
       </main>
-    </>
+    </motion.div>
   );
 }

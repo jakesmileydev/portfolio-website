@@ -97,6 +97,9 @@ a {
   padding: 0.6rem 0;
   border-bottom: 1px solid #cccccc;
 }
+.navigation__wrapper .navigation__links .navigation__link {
+  padding: 0.4rem 0;
+}
 .navigation__wrapper .navigation__socials {
   border-top: 1px solid #cccccc;
   display: flex;
@@ -374,7 +377,7 @@ header .open-mobile span:nth-child(3) {
   .about {
     grid-template-columns: 1fr;
   }
-  .about .about__image {
+  .about .about__image-container {
     grid-row: 1;
   }
 }

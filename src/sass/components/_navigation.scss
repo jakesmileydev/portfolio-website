@@ -33,6 +33,9 @@
       padding: 0.6rem 0;
       border-bottom: 1px solid $grey--border;
     }
+    & .navigation__link {
+      padding: 0.4rem 0;
+    }
   }
   // Little dark-grey chat bubble socials
   & .navigation__socials {

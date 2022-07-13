@@ -26,13 +26,14 @@
   }
   & .project__about {
     margin-top: 2rem;
+    font-size: 1.1rem;
   }
   & .project__features {
     list-style-type: disc;
-    margin-top: 1rem;
+    margin-top: 2rem;
     & li {
       margin-left: 1.2rem;
-      margin-top: 1rem;
+      margin-top: 0.8rem;
     }
   }
   & .project__features__header {
@@ -48,17 +49,21 @@
     background-repeat: no-repeat;
   }
   & .project__links {
-    margin-top: 2rem;
+    margin-top: 1.4rem;
     display: flex;
     justify-content: space-around;
   }
+
   & .project__link {
+    padding: 0.25rem;
+    font-size: 1.1rem;
     //
     // color: $grey--bg;
     // background-color: $grey--text;
     // padding: 1rem 2.6rem;
     // text-transform: uppercase;
-
+    border-bottom: 1px solid $grey--bg;
+    transition: 0.2s ease-in-out;
     &:hover {
       border-bottom: 1px solid $grey--text;
     }

@@ -19,7 +19,7 @@ export default function Project(props) {
         </h2>
         <p className="project__about">{props.about}</p>
         <ul className="project__features">
-          <h3 className="project__features__header">Features:</h3>
+          <h3 className="project__features__header">Features</h3>
           {projectFeaturesElements}
         </ul>
       </div>
@@ -30,8 +30,7 @@ export default function Project(props) {
           className="project__image"
           style={{
             backgroundImage: `url(${require("../../images/" +
-              props.imageName +
-              ".jpg")})`,
+              props.imageName)})`,
           }}
         ></div>
         <ul className="project__links">

@@ -37,7 +37,7 @@ const projects = [
     title: "Rad Bikes",
     subTitle: "E-commerce bike shop",
     imageName: "radbikes.jpg",
-    about: `The first big project I designed and developed myself. I'm particularly proud of the forest footer. Images from Unsplash`,
+    about: `The first big project I designed and developed myself. I'm particularly proud of the forest footer. Images from Unsplash.`,
     features: [
       "Fully responsive design",
       "Shopping cart with CRUD functionality",

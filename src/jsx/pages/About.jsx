@@ -9,18 +9,16 @@ export default function About(props) {
       <main>
         <section className="about">
           <div className="about__info">
-            <p className="about__text">Hello!</p>
-            <p className="about__text">
+            <p>Hello!</p>
+            <p>
               I'm Jake, a web developer from Camano Island, Washington. I love
               creating web applications that people can enjoy and use.
             </p>
-            <p className="about__text">
+            <p>
               My goal is to create products that clients are proud of, and to
               architect clean, readable code.
             </p>
-            <p className="about__text">
-              Here are a few technologies I've been working with lately:
-            </p>
+            <p>Here are a few technologies I've been working with lately:</p>
             <div className="about__technologies">
               <ul>
                 <li>React.js</li>
@@ -36,12 +34,8 @@ export default function About(props) {
               </ul>
             </div>
           </div>
-          <div className="about__graphic">
-            <div className="about__graphic__image"></div>
-            <div className="about__graphic__background">
-              <span></span>
-              <span></span>
-            </div>
+          <div className="about__image-container">
+            <div className="about__image"></div>
           </div>
         </section>
       </main>

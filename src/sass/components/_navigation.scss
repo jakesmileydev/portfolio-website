@@ -1,21 +1,6 @@
-.navigation {
-  @include max-1000 {
-    width: 100vw;
-    height: 100vh;
-    background-color: rgba(0, 0, 0, 0.76);
-    position: fixed;
-    z-index: 100;
-    opacity: 0;
-    visibility: hidden;
-    & .navigation__wrapper {
-      right: 0;
-      transform: translateX(100%);
-    }
-    & .navigation__logo {
-      margin-top: 4rem;
-    }
-  }
-  & .navigation__wrapper {
+.navigation__wrapper {
+  // Needs a wrapper for backdrop in mobile view
+  & .navigation {
     padding: $page-padding;
     height: 100vh;
     border-right: 1px solid $grey--border;
@@ -23,9 +8,10 @@
     background-color: $grey--bg;
   }
   & .navigation__logo {
+    // Name and Title
     border-top: 1px solid $grey--border;
     border-bottom: 1px solid $grey--border;
-    // height and padding top must match header
+    // height and padding top must match header to keep borders aligned
     height: $header-height;
     padding: $header-padding;
     & span {
@@ -48,6 +34,7 @@
       border-bottom: 1px solid $grey--border;
     }
   }
+  // Little dark-grey chat bubble socials
   & .navigation__socials {
     border-top: 1px solid $grey--border;
     display: flex;
@@ -59,6 +46,7 @@
       display: flex;
       border-radius: 3px;
       position: relative;
+      // the bottom pointer part of the chat bubble
       &::before {
         content: "";
         width: 1rem;
@@ -80,18 +68,67 @@
       z-index: 1;
     }
   }
-
   & .navigation__close-mobile {
+    // The X button for closing mobile navigation
     position: absolute;
-    top: 3.6rem;
-    right: 3rem;
+    top: 4.2rem;
+    right: 2.7rem;
     background-color: $grey--bg;
-
+    cursor: pointer;
+    // don't show at screens wider than 1000px (see media query mixin below)
+    display: none;
     & .navigation__close-mobile__icon {
       font-size: 2.2rem;
       color: $grey--text;
       background-color: $grey--bg;
-      display: none;
+    }
+  }
+
+  // Set up mobile navigation
+  @include max-1000 {
+    // Hide the menu and move it to right side of the page
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    z-index: 100;
+
+    // opacity: 0;
+    background-color: rgba(0, 0, 0, 0);
+    visibility: hidden;
+    transition: 0.3s ease-in-out;
+    &.navigation__mobile-open {
+      // Show menu and dim the rest of the page
+      visibility: visible;
+      background-color: rgba(0, 0, 0, 0.76);
+      & .navigation {
+        // mobile navigation slide in
+        transform: translateX(0);
+      }
+    }
+    & .navigation {
+      // mobile navigation menu before slide in
+      transition: 0.3s ease-in-out;
+      right: 0;
+      transform: translateX(100%);
+    }
+
+    & .navigation__logo {
+      // allow room for the close button
+      margin-top: 5rem;
+    }
+    & .navigation__close-mobile {
+      // display close button
+      display: block;
+    }
+  }
+
+  // reduce padding and adjust close button for mobile
+  @include max-400 {
+    & .navigation {
+      padding: $page-padding__mobile;
+    }
+    & .navigation__close-mobile {
+      right: 1.3rem;
     }
   }
 }

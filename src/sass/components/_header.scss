@@ -20,7 +20,7 @@ header {
     padding: 0.5rem;
     cursor: pointer;
     & span {
-      width: 2.2rem;
+      width: 2.1rem;
       height: 3px;
       background-color: $grey--text;
       display: block;
@@ -28,10 +28,10 @@ header {
       margin-left: auto;
     }
     & span:nth-child(1) {
-      width: 1.7rem;
+      width: 1.6rem;
     }
     & span:nth-child(3) {
-      width: 1.2rem;
+      width: 1.1rem;
     }
     display: none;
     @include max-1000 {

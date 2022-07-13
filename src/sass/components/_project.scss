@@ -27,6 +27,18 @@
   & .project__about {
     margin-top: 2rem;
   }
+  & .project__features {
+    list-style-type: disc;
+    margin-top: 1rem;
+    & li {
+      margin-left: 1.2rem;
+      margin-top: 1rem;
+    }
+  }
+  & .project__features__header {
+    text-transform: uppercase;
+    font-weight: 500;
+  }
 
   & .project__image {
     width: 100%;
@@ -41,8 +53,17 @@
     justify-content: space-around;
   }
   & .project__link {
+    //
+    // color: $grey--bg;
+    // background-color: $grey--text;
+    // padding: 1rem 2.6rem;
+    // text-transform: uppercase;
+
     &:hover {
       border-bottom: 1px solid $grey--text;
     }
+  }
+  @include max-800 {
+    grid-template-columns: 1fr;
   }
 }

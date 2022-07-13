@@ -1,5 +1,5 @@
-@mixin max-360 {
-  @media (max-width: 22.5em) {
+@mixin max-400 {
+  @media (max-width: 25em) {
     @content;
   }
 }
@@ -14,6 +14,11 @@
   }
 }
 
+@mixin max-800 {
+  @media (max-width: 50em) {
+    @content;
+  }
+}
 @mixin max-900 {
   @media (max-width: 56.25em) {
     @content;

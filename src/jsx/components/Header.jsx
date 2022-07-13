@@ -5,7 +5,10 @@ export default function Header(props) {
         <span>/ </span>
         {props.headerText}
       </h1>
-      <button className="open-mobile">
+      <button
+        className="open-mobile"
+        onClick={() => props.setIsMobileNavOpen(true)}
+      >
         <span></span>
         <span></span>
         <span></span>

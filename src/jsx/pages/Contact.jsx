@@ -1,8 +1,11 @@
 import Header from "../components/Header";
-export default function Contact() {
+export default function Contact(props) {
   return (
     <>
-      <Header headerText="CONTACT" />
+      <Header
+        headerText="CONTACT"
+        setIsMobileNavOpen={props.setIsMobileNavOpen}
+      />
       <main>
         <form className="contact-form">
           <label htmlFor="name">Name</label>

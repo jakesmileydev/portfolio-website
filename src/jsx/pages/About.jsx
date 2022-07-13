@@ -1,8 +1,11 @@
 import Header from "../components/Header";
-export default function About() {
+export default function About(props) {
   return (
     <>
-      <Header headerText="ABOUT" />
+      <Header
+        headerText="ABOUT"
+        setIsMobileNavOpen={props.setIsMobileNavOpen}
+      />
       <main>
         <section className="about">
           <div className="about__text">
@@ -20,14 +23,14 @@ export default function About() {
               <ul>
                 <li>React.js</li>
                 <li>Sass</li>
-                <li>Contentful</li>
+                <li>Git</li>
                 <li>Netlify</li>
               </ul>
               <ul>
+                <li>Javascript</li>
                 <li>HTML</li>
                 <li>CSS</li>
-                <li>Javascript</li>
-                <li>Git</li>
+                <li>Contentful</li>
               </ul>
             </div>
           </div>

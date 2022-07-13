@@ -18,6 +18,9 @@ body {
   @include max-1000 {
     margin-left: 0;
   }
+  @include max-400 {
+    padding: $page-padding__mobile;
+  }
 }
 input,
 textarea {

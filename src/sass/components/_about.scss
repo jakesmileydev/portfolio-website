@@ -9,9 +9,9 @@
     margin-bottom: 1rem;
   }
   & .about__image {
-    background-image: url("./images/IMG_3946.jpg");
-    padding-top: 100%;
-    background-position: center;
+    background-image: url("./images/jake.jpg");
+    padding-top: 120%;
+    background-position: (50% 50%);
     background-size: cover;
     background-repeat: no-repeat;
   }
@@ -27,6 +27,12 @@
         text-transform: uppercase;
         font-weight: 500;
       }
+    }
+  }
+  @include max-600 {
+    grid-template-columns: 1fr;
+    & .about__image {
+      grid-row: 1;
     }
   }
 }

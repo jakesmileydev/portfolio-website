@@ -1,4 +1,8 @@
 export default function Project(props) {
+  const projectFeaturesElements = props.features.map((feature, index) => (
+    <li key={index}>{feature}</li>
+  ));
+
   return (
     <div className="project">
       {/* Left side, Top on mobile*/}
@@ -14,6 +18,10 @@ export default function Project(props) {
           </span>
         </h2>
         <p className="project__about">{props.about}</p>
+        <ul className="project__features">
+          <h3 className="project__features__header">Features:</h3>
+          {projectFeaturesElements}
+        </ul>
       </div>
 
       {/* Right side, Bottom on mobile */}

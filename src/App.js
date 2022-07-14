@@ -12,7 +12,17 @@ import ThankYou from "./jsx/pages/ThankYou";
 export default function App() {
   const location = useLocation();
 
+  //  This state controls mobile navigation
+  //  The setter is passed to all pages to build their headers
   const [isMobileNavOpen, setIsMobileNavOpen] = useState(false);
+
+  //  This state is in APP.js so the name entered in the form
+  //  can be passed down to the thank-you page
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
 
   return (
     <>
@@ -31,7 +41,13 @@ export default function App() {
           <Route
             exact
             path="/contact"
-            element={<Contact setIsMobileNavOpen={setIsMobileNavOpen} />}
+            element={
+              <Contact
+                setIsMobileNavOpen={setIsMobileNavOpen}
+                formData={formData}
+                setFormData={setFormData}
+              />
+            }
           />
           <Route
             exact
@@ -41,7 +57,12 @@ export default function App() {
           <Route
             exact
             path="/thank-you"
-            element={<ThankYou setIsMobileNavOpen={setIsMobileNavOpen} />}
+            element={
+              <ThankYou
+                setIsMobileNavOpen={setIsMobileNavOpen}
+                senderName={formData.name}
+              />
+            }
           />
         </Routes>
         {/* </div> */}

@@ -1,14 +1,14 @@
-import Header from "../components/Header";
-import { motion } from "framer-motion";
+import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import { useState } from "react";
+import { motion } from "framer-motion";
+
+import Header from "../components/Header";
+
 export default function Contact(props) {
+  // For navigating to thank-you page after POST
   const navigate = useNavigate();
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    message: "",
-  });
+
+  // Encode form data
   const encode = (data) => {
     return Object.keys(data)
       .map(
@@ -16,10 +16,15 @@ export default function Contact(props) {
       )
       .join("&");
   };
+
   const handleFormChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
-    console.log(formData);
+    props.setFormData({ ...props.formData, [e.target.name]: e.target.value });
   };
+
+  useEffect(() => {
+    console.log(props.formData);
+  }, [props.formData]);
+
   const submitHandler = (e) => {
     e.preventDefault();
     // const myForm = document.getElementById("contact-form");
@@ -34,10 +39,10 @@ export default function Contact(props) {
     fetch("/", {
       method: "POST",
       headers: { "Content-type": "application/x-www-form-urlencoded" },
-      body: encode({ "form-name": "smiley-contact", ...formData }),
+      body: encode({ "form-name": "smiley-contact", ...props.formData }),
     })
       .then(() => navigate("/thank-you"))
-      .catch((error) => console.log(error));
+      .catch((error) => alert(error));
   };
   return (
     <motion.div

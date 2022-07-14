@@ -1,0 +1,9 @@
+.thank-you {
+  padding: 3rem 0;
+  border-bottom: 1px solid $grey--border;
+  & h2 {
+    font-weight: 500;
+    margin-bottom: 1rem;
+    font-size: 1.4rem;
+  }
+}

@@ -25,7 +25,10 @@ export default function Contact(props) {
       />
 
       <main>
-        <p>Thanks for reaching out, I'll be in touch!</p>
+        <section className="thank-you">
+          <h2>Hi (Name)</h2>
+          <p>Thanks for reaching out, I'll be in touch!</p>
+        </section>
       </main>
     </motion.div>
   );

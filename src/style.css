@@ -366,7 +366,7 @@ header .open-mobile span:nth-child(3) {
   border: 6px solid #70c4cb;
 }
 .about .about__image-container .about__image {
-  background-image: url("./images/jake.jpg");
+  background-image: url("./images/jake.webp");
   padding-top: 100%;
   border-radius: 50%;
   background-position: 50% 50%;
@@ -380,6 +380,16 @@ header .open-mobile span:nth-child(3) {
   .about .about__image-container {
     grid-row: 1;
   }
+}
+
+.thank-you {
+  padding: 3rem 0;
+  border-bottom: 1px solid #cccccc;
+}
+.thank-you h2 {
+  font-weight: 500;
+  margin-bottom: 1rem;
+  font-size: 1.4rem;
 }
 
 /*# sourceMappingURL=style.css.map */

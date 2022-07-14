@@ -2,18 +2,18 @@ import Header from "../components/Header";
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 export default function Contact(props) {
-  let navigate = useNavigate();
+  const navigate = useNavigate();
   const submitHandler = (e) => {
     e.preventDefault();
-    let myForm = document.getElementById("contact-form");
-    let formData = new FormData(myForm);
+    const myForm = document.getElementById("contact-form");
+    const formData = new FormData(myForm);
     fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: new URLSearchParams(formData).toString(),
     })
       .then(() => navigate("/thank-you"))
-      .catch((error) => alert(error));
+      .catch((error) => console.log(error));
   };
   return (
     <motion.div

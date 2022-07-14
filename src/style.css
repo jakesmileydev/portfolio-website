@@ -392,4 +392,17 @@ header .open-mobile span:nth-child(3) {
   font-size: 1.4rem;
 }
 
+.error {
+  padding: 3rem 0;
+  border-bottom: 1px solid #cccccc;
+}
+.error h2 {
+  font-weight: 500;
+  margin-bottom: 1rem;
+  font-size: 1.4rem;
+}
+.error p {
+  margin-bottom: 1rem;
+}
+
 /*# sourceMappingURL=style.css.map */

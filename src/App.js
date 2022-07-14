@@ -8,6 +8,7 @@ import Work from "./jsx/pages/Work";
 import Contact from "./jsx/pages/Contact";
 import About from "./jsx/pages/About";
 import ThankYou from "./jsx/pages/ThankYou";
+import Error from "./jsx/pages/Error";
 
 export default function App() {
   const location = useLocation();
@@ -17,7 +18,7 @@ export default function App() {
   const [isMobileNavOpen, setIsMobileNavOpen] = useState(false);
 
   //  This state is in APP.js so the name entered in the form
-  //  can be passed down to the thank-you page
+  //  can be passed down to the thank-you page (ie: Thanks Steve, we'll be in touch)
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -64,6 +65,7 @@ export default function App() {
               />
             }
           />
+          <Route exact path="/error" element={<Error />} />
         </Routes>
         {/* </div> */}
       </AnimatePresence>

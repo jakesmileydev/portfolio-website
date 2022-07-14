@@ -41,7 +41,10 @@ export default function Contact(props) {
       headers: { "Content-type": "application/x-www-form-urlencoded" },
       body: encode({ "form-name": "smiley-contact", ...props.formData }),
     })
-      .then(() => navigate("/thank-you"))
+      .then((response) => {
+        if (response.ok === true) navigate("/thank-you");
+        if (response.ok === false) navigate("/error");
+      })
       .catch((error) => alert(error));
   };
   return (

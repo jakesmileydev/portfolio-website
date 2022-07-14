@@ -1,7 +1,8 @@
-import Header from "../components/Header";
 import { motion } from "framer-motion";
 
-export default function Contact(props) {
+import Header from "../components/Header";
+
+export default function Error() {
   return (
     <motion.div
       className="page"
@@ -19,15 +20,15 @@ export default function Contact(props) {
       }}
       exit={{ opacity: 0, transition: { duration: 0.2 } }}
     >
-      <Header
-        headerText="THANK YOU"
-        setIsMobileNavOpen={props.setIsMobileNavOpen}
-      />
+      <Header headerText="ERROR" />
 
       <main>
-        <section className="thank-you">
-          <h2>Hi {props.senderName ? `${props.senderName}!` : `!`}</h2>
-          <p>Thanks for reaching out. I'll be in touch.</p>
+        <section className="error">
+          <h2>Something went wrong with your form submission.</h2>
+          <p>
+            Sorry about that, try re-sending your message or e-mail me directly:
+          </p>
+          <p>hello@jakesmiley.com</p>
         </section>
       </main>
     </motion.div>
